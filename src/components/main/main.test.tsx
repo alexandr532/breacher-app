@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import App from './';
+import Main from './';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const titleElement = screen.getByText(/Breacher::MongoDb/i);
+  render(<Main />);
+  const titleElement = screen.getByText(/Breacher::Main/i);
   expect(titleElement).toBeInTheDocument();
 });
