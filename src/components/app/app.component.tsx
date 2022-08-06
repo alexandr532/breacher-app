@@ -1,17 +1,19 @@
 import './app.styles.scss';
-import { Link, Outlet } from 'react-router-dom';
-import { AppStatusBar } from './status-bar';
+import { Routes, Route } from 'react-router-dom';
+import { AppStatusBar, AppHeader, AppSideBar } from '../app';
+import { Home, Connect } from '../'
 
 export function App() {
   return (
-    <div className='breacher'>
-      <h1>Breacher::MongoDb</h1>
-      <nav>
-        <Link to='/home'>Home</Link> | {' '}
-        <Link to='/connect'>Connect</Link> | {' '}
-        <Link to='/guarded'>Guarded</Link>
-      </nav>
-      <Outlet />
+    <div className='app'>
+      <AppHeader />
+      <div className='app__content'>
+        <AppSideBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='connect' element={<Connect />} />
+        </Routes>
+      </div>
       <AppStatusBar />
     </div>
 )};

@@ -1,10 +1,8 @@
 import './home.styles.scss';
-import { HomeHeader } from './header';
 
 export function Home() {
   return (
-  <>
-    <HomeHeader />
+  <div className='app-home'>
     <h3>Breacher::Home</h3>
-  </>
+  </div>
 )};

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.scss';
-import { App, Connect, GuardedRoute, Home } from './components';
+import { App } from './components';
 import reportWebVitals from './report-web-vitals';
 
 const root = ReactDOM.createRoot(
@@ -11,14 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />}>
-          <Route path='home' element={<Home />} />
-          <Route path='connect' element={<Connect />} />
-          <Route path="guarded" element={<GuardedRoute redirect='/connect'>
-            <Home /></GuardedRoute>} />
-        </Route>
-      </Routes>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );
