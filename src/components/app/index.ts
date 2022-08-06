@@ -1,2 +1,2 @@
-import { App } from './app.component';
-export default App;
+export * from './status-bar';
+export * from './app.component';

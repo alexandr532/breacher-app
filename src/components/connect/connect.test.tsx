@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import Main from './';
+import { Connect } from './connect.component';
 
 test('renders learn react link', () => {
-  render(<Main />);
-  const titleElement = screen.getByText(/Breacher::Main/i);
+  render(<Connect />);
+  const titleElement = screen.getByText(/Breacher::Connect/i);
   expect(titleElement).toBeInTheDocument();
 });

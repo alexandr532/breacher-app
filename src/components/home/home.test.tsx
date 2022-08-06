@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import StatusBar from './';
+import { Home } from './home.component';
 
 test('renders learn react link', () => {
-  render(<StatusBar />);
-  const titleElement = screen.getByText(/Breacher::StatusBar/i);
+  render(<Home />);
+  const titleElement = screen.getByText(/Breacher::Home/i);
   expect(titleElement).toBeInTheDocument();
 });

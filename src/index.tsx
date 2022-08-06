@@ -2,10 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
-import Auth from './components/auth';
-import App from './components/app';
-import Main from './components/main';
-import StatusBar from './components/status-bar';
+import { App, Connect, Home } from './components';
 import reportWebVitals from './report-web-vitals';
 
 const root = ReactDOM.createRoot(
@@ -16,8 +13,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route path='main' element={<Main />} />
-          <Route path='auth' element={<Auth />} />
+          <Route path='home' element={<Home />} />
+          <Route path='connect' element={<Connect />} />
         </Route>
       </Routes>
     </BrowserRouter>

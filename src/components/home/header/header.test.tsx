@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import Header from './';
+import { HomeHeader } from './header.component';
 
 test('renders learn react link', () => {
-  render(<Header />);
-  const titleElement = screen.getByText(/Breacher::Header/i);
+  render(<HomeHeader />);
+  const titleElement = screen.getByText(/Breacher::HomeHeader/i);
   expect(titleElement).toBeInTheDocument();
 });
