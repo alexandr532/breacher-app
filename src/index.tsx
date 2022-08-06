@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.scss';
-import { App, Connect, Home } from './components';
+import { App, Connect, GuardedRoute, Home } from './components';
 import reportWebVitals from './report-web-vitals';
 
 const root = ReactDOM.createRoot(
@@ -15,6 +15,8 @@ root.render(
         <Route path='/' element={<App />}>
           <Route path='home' element={<Home />} />
           <Route path='connect' element={<Connect />} />
+          <Route path="guarded" element={<GuardedRoute redirect='/connect'>
+            <Home /></GuardedRoute>} />
         </Route>
       </Routes>
     </BrowserRouter>
