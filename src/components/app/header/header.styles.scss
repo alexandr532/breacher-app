@@ -1,8 +1,10 @@
 .app-header {
-  outline: 1px dashed white;
+  border-bottom: 1px solid #aaa;
+  height: 30px;
 
   h3 {
-    color: #bbbbbb;
-    text-align: center;
+    color: #eee;
+    margin-left: 38px;
+    line-height: 30px;
   }
 }

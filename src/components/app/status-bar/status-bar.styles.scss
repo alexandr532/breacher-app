@@ -1,8 +1,21 @@
 .app-status-bar {
-  outline: 1px dashed white;
+  overflow: hidden;
+  color: #bbbbbb;
+  display: flex;
+  height: 24px;
+  line-height: 24px;
+  border-top: 1px solid #333;
 
-  h3 {
-    color: #bbbbbb;
+  &__type {
+    width: 33px;
+    overflow: hidden;
     text-align: center;
+    border-right: 1px solid #333;
+  }
+
+  &__message {
+    flex: 1;
+    margin-left: 4px;
+    color: #666;
   }
 }
