@@ -1,8 +1,32 @@
 .app-side-bar {
-  outline: 1px dashed white;
+  border-right: 1px solid #ffffff;
 
-  h3 {
+  a {
+    display: block;
     color: #bbbbbb;
     text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  hr {
+    margin: 0 5px;
+    display: block;
+  }
+
+  i {
+    position: relative;
+  }
+
+  .icon-cubes {
+    left: -3px;
+  }
+
+  .icon-cog-alt {
+    left: -1px;
   }
 }
