@@ -1,41 +1,41 @@
 import './sidebar.styles.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export function AppSidebar() {
   return (
   <div className='app-sidebar'>
-    <Link to='/breaches'>
+    <NavLink to='/breaches'>
       <i className='icon-database' />
-    </Link>
-    <Link to='/collections'>
+    </NavLink>
+    <NavLink to='/collections'>
       <i className='icon-cubes' />
-    </Link>
-    <Link to='/documents'>
+    </NavLink>
+    <NavLink to='/documents'>
       <i className='icon-cube' />
-    </Link>
-    <Link to='/'>
+    </NavLink>
+    <div className='app-sidebar__button disabled'>
       <i className='icon-arrows-cw' />
-    </Link>
+    </div>
     <hr />
-    <Link to='/'>
+    <div className='app-sidebar__button disabled'>
       <i className='icon-cog-alt' />
-    </Link>
-    <Link to='/'>
+    </div>
+    <div className='app-sidebar__button disabled'>
       <i className='icon-plus' />
-    </Link>
-    <Link to='/'>
+    </div>
+    <div className='app-sidebar__button disabled'>
       <i className='icon-pencil' />
-    </Link>
-    <Link to='/'>
+    </div>
+    <div className='app-sidebar__button disabled'>
       <i className='icon-wrench' />
-    </Link>
+    </div>
     <hr/>
-    <Link to='/'>
+    <a href='https://github.com/alexandr532/breacher-app/issues' target='_blank' rel='noopener noreferrer'>
       <i className='icon-bug' />
-    </Link>
+    </a>
     <hr />
-    <Link to='/'>
+    <div className='app-sidebar__button'>
       <i className='icon-lock' />
-    </Link>
+    </div>
   </div>
 )};
