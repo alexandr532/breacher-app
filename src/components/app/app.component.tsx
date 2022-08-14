@@ -1,5 +1,5 @@
 import './app.styles.scss';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppStatusBar, AppHeader, AppSidebar } from '../app';
 import { Home, Breaches, Collections, Documents } from '../../components'
