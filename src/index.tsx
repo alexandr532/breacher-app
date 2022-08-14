@@ -14,10 +14,15 @@ const socket: Socket = io('http://localhost:3003');
 
 socket.on('connect', (): void => {
   console.log('Connected with socket.id:', socket.id);
-  socket.emit('auth', socket.id);
+  const token = localStorage.getItem('auth');
+  socket.emit('auth', token);
   socket.on('disconnect', () => {
     console.log('Disconnected'); 
   });
+  socket.on('token', (newToken: string) => {
+    localStorage.setItem('auth', newToken);
+    console.log('Token:', newToken);
+  })
 });
 
 root.render(
